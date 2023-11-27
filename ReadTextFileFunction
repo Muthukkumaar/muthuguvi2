@@ -1,0 +1,15 @@
+def read_text_file(file_name):
+    try:
+        with open(file_name, 'r') as file:
+            content = file.read()
+            print("Content of the file '{}' is:".format(file_name))
+            print(content)
+    except FileNotFoundError:
+        print("File '{}' not found.".format(file_name))
+    except Exception as e:
+        print("An error occurred: ", e)
+
+# Example usage:
+# Provide the name of the text file as an argument to the function
+file_name = 'your_text_file.txt'  # Replace 'your_text_file.txt' with the actual file name
+read_text_file(file_name)
